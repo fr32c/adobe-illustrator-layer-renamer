@@ -1,10 +1,30 @@
-# Adobe Illustrator Layer Renamer
+# Adobe Illustrator Layer Renamer + Regexp + Symbols
 
 This script allows you to batch rename layers in Illustrator. 
 
 ![](https://s3-us-west-2.amazonaws.com/sebastienlavoie.personal/adobe-illustrator-layer-renamer.png)
 
-The script currently only works with string replacement. Regular expressions will eventually be added.
+The script used to only works with string replacement. Regular expressions was eventually added.
+
+Plus, for my needs, I added the name of the single symbol from each layer.
+
+I had this Ai structure:
+Layer1
+----SymbolA
+Layer2
+----SymbolA
+Layer3
+----SymbolB
+
+and I wanted to have:
+Layer1-SymbolA
+----SymbolA
+Layer2-SymbolA
+----SymbolA
+Layer3-SymbolB
+----SymbolB
+ 
+So i tweaked te script to use regex AND to insert the symbol's name at the right place.
 
 ## Installation
 
